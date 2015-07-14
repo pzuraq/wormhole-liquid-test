@@ -1,0 +1,27 @@
+.modal {
+  height: 250px;
+  width: 250px;
+  padding: 50px;
+  font-size: 50px;
+  background-color: black;
+  color: white;
+}
+
+.ember-tether {
+  position: absolute;
+}
+
+.liquid-target {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.modal-outlet {
+  position: fixed;
+}
+
+.liquid-child {
+  overflow: visible;
+}

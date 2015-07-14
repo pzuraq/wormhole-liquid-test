@@ -1,3 +1,98 @@
-<h2 id="title">Welcome to Ember.js</h2>
+{{ember-wormhole-targets}}
 
-{{outlet}}
+{{liquid-target name="modal" class="modal-outlet"}}
+
+
+
+<button {{action "openModalDialog"}}>
+  Open Modal Dialog
+</button>
+
+<button id="popup-button" {{action "openPopup"}}>
+  Popup
+</button>
+
+{{#if modalDialogStepOne}}
+  {{#ember-tether to="modal" target=documentBody targetModifier="visible" attachment="middle center" targetAttachment="middle center"}}
+    <div class="modal">
+      This is a modal dialog!
+
+      <button {{action "prevModalDialogStep"}}>
+        Prev
+      </button>
+
+      <button {{action "nextModalDialogStep"}}>
+        Next
+      </button>
+    </div>
+  {{/ember-tether}}
+{{/if}}
+
+{{#if modalDialogStepTwo}}
+  {{#ember-tether to="modal" target=documentBody targetModifier="visible" attachment="middle center" targetAttachment="middle center"}}
+    <div class="modal">
+      Another modal dialog!
+
+      <button {{action "prevModalDialogStep"}}>
+        Prev
+      </button>
+
+      <button {{action "nextModalDialogStep"}}>
+        Next
+      </button>
+    </div>
+  {{/ember-tether}}
+{{/if}}
+
+{{#if modalDialogStepThree}}
+  {{#ember-tether to="modal" target=documentBody targetModifier="visible" attachment="middle center" targetAttachment="middle center"}}
+    <div class="modal">
+      Almost done!
+
+      <button {{action "prevModalDialogStep"}}>
+        Prev
+      </button>
+
+      <button {{action "closeModalDialog"}}>
+        Complete!
+      </button>
+    </div>
+  {{/ember-tether}}
+{{/if}}
+
+{{#if showPopup}}
+  {{#ember-tether target="#popup-button" attachment="top left" targetAttachment="bottom left"}}
+    <div class="modal">
+      Popup
+    </div>
+  {{/ember-tether}}
+{{/if}}
+
+
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
+<h1>Test</h1>
